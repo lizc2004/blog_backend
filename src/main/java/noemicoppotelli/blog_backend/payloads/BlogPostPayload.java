@@ -1,10 +1,16 @@
 package noemicoppotelli.blog_backend.payloads;
 
-public record BlogPostPayload(
-        String categoria,
-        String titolo,
-        String contenuto,
-        int tempoDiLettura,
-        Long authorId
-) {
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+import java.util.UUID;
+
+@AllArgsConstructor
+@Getter
+public class BlogPostPayload {
+    private String categoria;
+    private String titolo;
+    private String contenuto;
+    private int tempoDiLettura;
+    private UUID authorId;
 }
